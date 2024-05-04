@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0" 
+                       xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
+                       xmlns="http://www.opengis.net/sld" 
+                       xmlns:ogc="http://www.opengis.net/ogc" 
+                       xmlns:xlink="http://www.w3.org/1999/xlink" 
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <NamedLayer>
+    <Name>default_line</Name>
+    <UserStyle>
+      <Title>Local Authority Boundaries</Title>
+      <Abstract>Polygon and Labels</Abstract>
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>rule1</Name>
+          <Title>Line</Title>
+          <Abstract>A solid line with a 1 pixel width</Abstract>
+          <LineSymbolizer>
+            <Stroke>
+              <CssParameter name="stroke">#CA34FF</CssParameter>
+              <CssParameter name="stroke-width">2</CssParameter>
+              <CssParameter name="stroke-dasharray">6 6</CssParameter>
+            </Stroke>
+          </LineSymbolizer>
+          <!-- Text Symbolizer for Labels -->
+          <TextSymbolizer>
+            <Label>
+              <ogc:PropertyName>fid</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-size">16</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+            <LabelPlacement>
+              <PointPlacement>
+                <AnchorPoint>
+                  <AnchorPointX>
+                    0.5
+                  </AnchorPointX>
+                  <AnchorPointY>
+                    0.5
+                  </AnchorPointY>
+                </AnchorPoint>
+              </PointPlacement>
+            </LabelPlacement>
+            <Halo>
+              <Radius>3</Radius>
+              <Fill>
+                <CssParameter name="fill">#CA34FF</CssParameter>
+              </Fill>
+            </Halo>
+            <Fill>
+              <CssParameter name="fill">#ffffff</CssParameter> <!-- Label color -->
+            </Fill>
+            <!-- Graphic margin for better spacing -->
+            <VendorOption name="graphic-margin">2</VendorOption>
+          </TextSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
