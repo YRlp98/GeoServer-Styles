@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <StyledLayerDescriptor version="1.0.0" 
                        xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
                        xmlns="http://www.opengis.net/sld" 
@@ -24,6 +23,11 @@
           </LineSymbolizer>
           <!-- Text Symbolizer for Labels -->
           <TextSymbolizer>
+            <Geometry>
+              <ogc:Function name="centroid">
+                <ogc:PropertyName>geom</ogc:PropertyName>
+              </ogc:Function>
+            </Geometry>
             <Label>
               <ogc:PropertyName>name</ogc:PropertyName>
             </Label>
@@ -32,18 +36,6 @@
               <CssParameter name="font-size">16</CssParameter>
               <CssParameter name="font-weight">bold</CssParameter>
             </Font>
-            <LabelPlacement>
-              <PointPlacement>
-                <AnchorPoint>
-                  <AnchorPointX>
-                    0.5
-                  </AnchorPointX>
-                  <AnchorPointY>
-                    0.5
-                  </AnchorPointY>
-                </AnchorPoint>
-              </PointPlacement>
-            </LabelPlacement>
             <Halo>
               <Radius>3</Radius>
               <Fill>
@@ -51,7 +43,7 @@
               </Fill>
             </Halo>
             <Fill>
-              <CssParameter name="fill">#ffffff</CssParameter> <!-- Label color -->
+              <CssParameter name="fill">#ffffff</CssParameter>
             </Fill>
             <!-- Graphic margin for better spacing -->
             <VendorOption name="graphic-margin">2</VendorOption>
