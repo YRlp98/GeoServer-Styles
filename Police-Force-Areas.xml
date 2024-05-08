@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <StyledLayerDescriptor version="1.0.0" 
                        xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
                        xmlns="http://www.opengis.net/sld" 
@@ -24,6 +23,12 @@
           </LineSymbolizer>
           <!-- Text Symbolizer for Labels -->
           <TextSymbolizer>
+            <!-- Use centroid function to determine label position -->
+            <Geometry>
+              <ogc:Function name="centroid">
+                <ogc:PropertyName>geom</ogc:PropertyName>
+              </ogc:Function>
+            </Geometry>
             <Label>
               <ogc:PropertyName>pfa_name</ogc:PropertyName>
             </Label>
@@ -35,12 +40,8 @@
             <LabelPlacement>
               <PointPlacement>
                 <AnchorPoint>
-                  <AnchorPointX>
-                    0.5
-                  </AnchorPointX>
-                  <AnchorPointY>
-                    0.5
-                  </AnchorPointY>
+                  <AnchorPointX>0.5</AnchorPointX>
+                  <AnchorPointY>0.5</AnchorPointY>
                 </AnchorPoint>
               </PointPlacement>
             </LabelPlacement>
@@ -51,7 +52,7 @@
               </Fill>
             </Halo>
             <Fill>
-              <CssParameter name="fill">#ffffff</CssParameter> <!-- Label color -->
+              <CssParameter name="fill">#ffffff</CssParameter>
             </Fill>
             <!-- Graphic margin for better spacing -->
             <VendorOption name="graphic-margin">2</VendorOption>
