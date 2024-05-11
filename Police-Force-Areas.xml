@@ -33,7 +33,7 @@
               <ogc:PropertyName>pfa_name</ogc:PropertyName>
             </Label>
             <Font>
-              <CssParameter name="font-family">Arial</CssParameter>
+              <CssParameter name="font-family">SansSerif</CssParameter>
               <CssParameter name="font-size">16</CssParameter>
               <CssParameter name="font-weight">bold</CssParameter>
             </Font>
