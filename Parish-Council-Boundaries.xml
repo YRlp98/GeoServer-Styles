@@ -34,7 +34,7 @@
             </Label>
             <Font>
               <CssParameter name="font-family">SansSerif</CssParameter>
-              <CssParameter name="font-size">12</CssParameter>
+              <CssParameter name="font-size">16</CssParameter>
               <CssParameter name="font-weight">bold</CssParameter>
             </Font>
             <LabelPlacement>
