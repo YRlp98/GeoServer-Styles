@@ -11,7 +11,7 @@
       <Abstract>Polygon and Labels</Abstract>
       <FeatureTypeStyle>
         <Rule>
-          <Name>rule1</Name>
+          <Name>rule_1</Name>
           <Title>Line</Title>
           <Abstract>A solid line with a 1 pixel width</Abstract>
           <LineSymbolizer>
@@ -34,7 +34,7 @@
             </Label>
             <Font>
               <CssParameter name="font-family">SansSerif</CssParameter>
-              <CssParameter name="font-size">16</CssParameter>
+              <CssParameter name="font-size">12</CssParameter>
               <CssParameter name="font-weight">bold</CssParameter>
             </Font>
             <LabelPlacement>
@@ -54,8 +54,10 @@
             <Fill>
               <CssParameter name="fill">#ffffff</CssParameter>
             </Fill>
-            <!-- Graphic margin for better spacing -->
-            <VendorOption name="graphic-margin">2</VendorOption>
+            <VendorOption name="priority">100</VendorOption>
+            <VendorOption name="labelRepeat">true</VendorOption>
+            <VendorOption name="repeat">300</VendorOption>
+            <VendorOption name="allowOverrun">true</VendorOption>
           </TextSymbolizer>
         </Rule>
       </FeatureTypeStyle>
