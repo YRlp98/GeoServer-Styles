@@ -54,8 +54,10 @@
             <Fill>
               <CssParameter name="fill">#ffffff</CssParameter>
             </Fill>
-            <!-- Graphic margin for better spacing -->
-            <VendorOption name="graphic-margin">2</VendorOption>
+            <VendorOption name="priority">100</VendorOption>
+            <VendorOption name="labelRepeat">true</VendorOption>
+            <VendorOption name="repeat">300</VendorOption>
+            <VendorOption name="allowOverrun">true</VendorOption>
           </TextSymbolizer>
         </Rule>
       </FeatureTypeStyle>
